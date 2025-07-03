@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="en">
+<link href="John Josh.JPG.jpg" rel="icon">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Jones Tech And Media | Digital Solutions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+         :root {
+            --primary: #3a86ff;
+            --secondary: #8338ec;
+            --accent: #ff006e;
+            --dark: #1a1a2e;
+            --light: #f8f9fa;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            scroll-behavior: smooth;
+            background-color: var(--light);
+            color: var(--dark);
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+        }
+        
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+        
+        @keyframes floating {
+            0% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-15px);
+            }
+            100% {
+                transform: translateY(0px);
+            }
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .nav-link::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 2px;
+            background: var(--accent);
+            transition: width .3s;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body class="overflow-x-hidden">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <span class="text-xl font-bold text-gray-900">Jones <span class="gradient-text text-transparent bg-clip-text" style="background-image: linear-gradient(135deg, var(--primary), var(--secondary));">Tech & Media</span></span>
+                    </div>
+                </div>
+                <div class="hidden md:ml-6 md:flex md:items-center md:space-x-8">
+                    <a href="index.html" class="nav-link text-gray-700 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium">Home</a>
+                    <a href="#about" class="nav-link text-gray-700 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium">About</a>
+                    <a href="#services" class="nav-link text-gray-700 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium">Services</a>
+                    <a href="#portfolio" class="nav-link text-gray-700 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium">Portfolio</a>
+                    <a href="#contact" class="nav-link text-gray-700 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium">Contact</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="text-gray-500 hover:text-gray-900 focus:outline-none">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="md:hidden hidden bg-white shadow-lg">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#home" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Home</a>
+                <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">About</a>
+                <a href="#services" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Services</a>
+                <a href="#portfolio" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Portfolio</a>
+                <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-20 pb-16 md:pt-32 gradient-bg text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="md:flex items-center justify-between">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">Bridging <span class="text-yellow-300">Creativity</span> With <span class="text-yellow-300">Technology</span></h1>
+                    <p class="text-xl mb-8 leading-relaxed">I help businesses and individuals create compelling digital experiences through innovative technology solutions and creative media production.</p>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#contact" class="px-8 py-3 bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-bold rounded-full transition duration-300 transform hover:scale-105">Get Started</a>
+                        <a href="#portfolio" class="px-8 py-3 border-2 border-white hover:bg-white hover:text-gray-900 font-bold rounded-full transition duration-300">View Work</a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center">
+                    <div class="w-64 h-64 md:w-80 md:h-80 rounded-full bg-white bg-opacity-20 flex items-center justify-center floating">
+                        <img src="John Josh.JPG.jpg" alt="Professional headshot of The Jones Tech And Media with a modern tech office background" class="w-full h-full rounded-full object-cover border-4 border-white" onerror="this.src='https://placehold.co/800x800?text=Professional+Headshot'">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="absolute bottom-0 left-0 right-0 h-20 overflow-hidden">
+            <svg viewBox="0 0 1200 120" preserveAspectRatio="none" class="w-full h-full">
+                <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" fill="#ffffff"></path>
+                <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,72,35.67,9.48,74.31-9.36,88.9-38.76,12.03-24.38,20.1-51.82,20.1-80.44V0Z" opacity=".5" fill="#ffffff"></path>
+                <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" fill="#ffffff"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">About <span class="gradient-text" style="background-image: linear-gradient(135deg, var(--primary), var(--secondary)); -webkit-background-clip: text; color: transparent;">Jones Tech & Media</span></h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto"></div>
+            </div>
+            <div class="md:flex items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
+                    <img src="https://placehold.co/800x600" alt="Tech workspace with multiple monitors showing design and coding applications" class="rounded-lg shadow-xl w-full h-auto" onerror="this.src='https://placehold.co/800x600?text=Tech+Workspace'">
+                </div>
+                <div class="md:w-1/2">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6">Combining Technical Expertise with Creative Vision</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">With a unique blend of technical skills and creative flair, I specialize in delivering comprehensive digital solutions that stand out in today's competitive landscape. My approach integrates meticulous coding with aesthetic design
+                        principles to create impactful digital experiences.</p>
+
+                    <div class="mb-8">
+                        <h4 class="text-xl font-semibold text-gray-800 mb-4">My Expertise Areas:</h4>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="flex items-center">
+                                <div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center mr-3">
+                                    <i class="fas fa-code text-blue-600"></i>
+                                </div>
+                                <span class="text-gray-700">Software Development</span>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-10 h-10 rounded-full bg-purple-100 flex items-center justify-center mr-3">
+                                    <i class="fas fa-photo-video text-purple-600"></i>
+                                </div>
+                                <span class="text-gray-700">Media Production</span>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-10 h-10 rounded-full bg-pink-100 flex items-center justify-center mr-3">
+                                    <i class="fas fa-paint-brush text-pink-600"></i>
+                                </div>
+                                <span class="text-gray-700">Web Design</span>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center mr-3">
+                                    <i class="fas fa-shield-alt text-green-600"></i>
+                                </div>
+                                <span class="text-gray-700">Cybersecurity</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="#contact" class="px-6 py-2 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-bold rounded-full inline-flex items-center mt-4 transition duration-300 hover:from-blue-600 hover:to-purple-700">
+                        Let's Connect
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">My <span class="gradient-text" style="background-image: linear-gradient(135deg, var(--primary), var(--secondary)); -webkit-background-clip: text; color: transparent;">Services</span></h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Comprehensive digital solutions tailored to your unique needs and business objectives.</p>
+                <div class="w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto mt-4"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-white rounded-lg shadow-md p-8 transform transition duration-500 card-hover">
+                    <div class="w-16 h-16 gradient-bg rounded-full flex items-center justify-center text-white mb-6 mx-auto">
+                        <i class="fas fa-code text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-4 text-center">Software Development</h3>
+                    <p class="text-gray-600 mb-4">Custom software solutions built with cutting-edge technologies to solve complex business problems and streamline operations.</p>
+                    <ul class="text-gray-600 text-sm space-y-2 mb-6">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span>Web and mobile application development</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span>API integration and backend services</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span>Database design and optimization</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="bg-white rounded-lg shadow-md p-8 transform transition duration-500 card-hover">
+                    <div class="w-16 h-16 gradient-bg rounded-full flex items-center justify-center text-white mb-6 mx-auto">
+                        <i class="fas fa-photo-video text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-4 text-center">Media Production</h3>
+                    <p class="text-gray-600 mb-4">Professional media content creation that captivates audiences and communicates your message effectively.</p>
+                    <ul class="text-gray-600 text-sm space-y-2 mb-6">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span>High-quality video production and editing</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span>Motion graphics and animation</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span>Audio production and sound design</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="bg-white rounded-lg shadow-md p-8 transform transition duration-500 card-hover">
+                    <div class="w-16 h-16 gradient-bg rounded-full flex items-center justify-center text-white mb-6 mx-auto">
+                        <i class="fas fa-ad text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-4 text-center">Digital Marketing</h3>
+                    <p class="text-gray-600 mb-4">Data-driven marketing strategies that increase your online presence and drive measurable business growth.</p>
+                    <ul class="text-gray-600 text-sm space-y-2 mb-6">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span>SEO & content marketing strategy</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span>Social media management & advertising</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span>Email marketing automation</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="bg-white rounded-lg shadow-md p-8 transform transition duration-500 card-hover">
+                    <div class="w-16 h-16 gradient-bg rounded-full flex items-center justify-center text-white mb-6 mx-auto">
+                        <i class="fas fa-paint-brush text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-4 text-center">Web Design & Development</h3>
+                    <p class="text-gray-600 mb-4">Stunning, high-performing websites that deliver exceptional user experiences and drive conversions.</p>
+                    <ul class="text-gray-600 text-sm space-y-2 mb-6">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span>Custom website design & development</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span>E-commerce solutions</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span>UI/UX optimization</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="bg-white rounded-lg shadow-md p-8 transform transition duration-500 card-hover">
+                    <div class="w-16 h-16 gradient-bg rounded-full flex items-center justify-center text-white mb-6 mx-auto">
+                        <i class="fas fa-shield-alt text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-4 text-center">Cybersecurity Solutions</h3>
+                    <p class="text-gray-600 mb-4">Protecting your digital assets with comprehensive security assessments and implementation services.</p>
+                    <ul class="text-gray-600 text-sm space-y-2 mb-6">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span>Security risk assessments</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span>Network security implementation</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span>Security awareness training</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Service 6 -->
+                <div class="bg-white rounded-lg shadow-md p-8 transform transition duration-500 card-hover">
+                    <div class="w-16 h-16 gradient-bg rounded-full flex items-center justify-center text-white mb-6 mx-auto">
+                        <i class="fas fa-lightbulb text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-4 text-center">Consulting Services</h3>
+                    <p class="text-gray-600 mb-4">Expert guidance to help you navigate digital transformation and implement the right technologies.</p>
+                    <ul class="text-gray-600 text-sm space-y-2 mb-6">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span>Technology strategy development</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span>Digital transformation consulting</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span>Solution architecture design</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Featured <span class="gradient-text" style="background-image: linear-gradient(135deg, var(--primary), var(--secondary)); -webkit-background-clip: text; color: transparent;">Projects</span></h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">A selection of my recent work across various digital disciplines.</p>
+                <div class="w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto mt-4"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="rounded-lg overflow-hidden shadow-lg transform transition duration-500 card-hover">
+                    <div class="portfolio-image">
+                        <img src="https://placehold.co/800x600" alt="User dashboard interface for business analytics platform with data visualizations" class="w-full h-60 object-cover" onerror="this.src='https://placehold.co/800x600?text=Analytics+Dashboard'">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold text-gray-800">Enterprise Analytics Dashboard</h3>
+                            <span class="px-3 py-1 bg-blue-100 text-blue-800 text-xs font-semibold rounded-full">Software Dev</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">A comprehensive analytics platform providing real-time business intelligence with custom visualization tools.</p>
+                        <div class="flex justify-between items-center">
+                            <a href="#" class="text-blue-600 hover:text-blue-800 font-medium flex items-center">
+                                View Project
+                                <i class="fas fa-external-link-alt ml-2 text-sm"></i>
+                            </a>
+                            <div class="flex space-x-2">
+                                <span class="text-xs text-gray-500">React</span>
+                                <span class="text-xs text-gray-500">Node.js</span>
+                                <span class="text-xs text-gray-500">D3.js</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="rounded-lg overflow-hidden shadow-lg transform transition duration-500 card-hover">
+                    <div class="portfolio-image">
+                        <img src="media.jpg" alt="Product commercial video still showing a sleek phone with animated UI elements" class="w-full h-60 object-cover" onerror="this.src='https://placehold.co/800x600?text=Product+Video'">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold text-gray-800">Tech Product Commercial</h3>
+                            <span class="px-3 py-1 bg-purple-100 text-purple-800 text-xs font-semibold rounded-full">Media ( Photography, videography,film and tv production)</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">A high-end product video showcasing features and benefits through cinematic visuals and motion graphics.</p>
+                        <div class="flex justify-between items-center">
+                            <a href="#" class="text-blue-600 hover:text-blue-800 font-medium flex items-center">
+                                View Project
+                                <i class="fas fa-external-link-alt ml-2 text-sm"></i>
+                            </a>
+                            <div class="flex space-x-2">
+                                <span class="text-xs text-gray-500">Cinema 4D</span>
+                                <span class="text-xs text-gray-500">After Effects</span>
+                                <span class="text-xs text-gray-500">Premiere Pro</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="rounded-lg overflow-hidden shadow-lg transform transition duration-500 card-hover">
+                    <div class="portfolio-image">
+                        <img src="https://placehold.co/800x600" alt="E-commerce website homepage with product gallery and clean UI elements" class="w-full h-60 object-cover" onerror="this.src='https://placehold.co/800x600?text=E-commerce+Site'">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold text-gray-800">Luxury Fashion E-Commerce</h3>
+                            <span class="px-3 py-1 bg-green-100 text-green-800 text-xs font-semibold rounded-full">Web Design</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">A premium online shopping experience with immersive product showcases and seamless checkout process.</p>
+                        <div class="flex justify-between items-center">
+                            <a href="#" class="text-blue-600 hover:text-blue-800 font-medium flex items-center">
+                                View Project
+                                <i class="fas fa-external-link-alt ml-2 text-sm"></i>
+                            </a>
+                            <div class="flex space-x-2">
+                                <span class="text-xs text-gray-500">Shopify</span>
+                                <span class="text-xs text-gray-500">Liquid</span>
+                                <span class="text-xs text-gray-500">JavaScript</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="rounded-lg overflow-hidden shadow-lg transform transition duration-500 card-hover">
+                    <div class="portfolio-image">
+                        <img src="https://placehold.co/800x600" alt="Social media marketing analytics dashboard showing engagement metrics" class="w-full h-60 object-cover" onerror="this.src='https://placehold.co/800x600?text=Marketing+Analytics'">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold text-gray-800">Social Media Campaign</h3>
+                            <span class="px-3 py-1 bg-yellow-100 text-yellow-800 text-xs font-semibold rounded-full">Marketing</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">An integrated social media strategy that increased engagement by 240% and conversions by 115%.</p>
+                        <div class="flex justify-between items-center">
+                            <a href="#" class="text-blue-600 hover:text-blue-800 font-medium flex items-center">
+                                View Project
+                                <i class="fas fa-external-link-alt ml-2 text-sm"></i>
+                            </a>
+                            <div class="flex space-x-2">
+                                <span class="text-xs text-gray-500">Instagram</span>
+                                <span class="text-xs text-gray-500">Facebook</span>
+                                <span class="text-xs text-gray-500">Google Ads</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="rounded-lg overflow-hidden shadow-lg transform transition duration-500 card-hover">
+                    <div class="portfolio-image">
+                        <img src="https://placehold.co/800x600" alt="Mobile banking app interface with security features highlighted" class="w-full h-60 object-cover" onerror="this.src='https://placehold.co/800x600?text=Banking+App'">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold text-gray-800">Secure Banking App</h3>
+                            <span class="px-3 py-1 bg-red-100 text-red-800 text-xs font-semibold rounded-full">Security</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">A financial application with multi-factor authentication, end-to-end encryption, and fraud detection.</p>
+                        <div class="flex justify-between items-center">
+                            <a href="#" class="text-blue-600 hover:text-blue-800 font-medium flex items-center">
+                                View Project
+                                <i class="fas fa-external-link-alt ml-2 text-sm"></i>
+                            </a>
+                            <div class="flex space-x-2">
+                                <span class="text-xs text-gray-500">Flutter</span>
+                                <span class="text-xs text-gray-500">Firebase</span>
+                                <span class="text-xs text-gray-500">OWASP</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="rounded-lg overflow-hidden shadow-lg transform transition duration-500 card-hover">
+                    <div class="portfolio-image">
+                        <img src="https://placehold.co/800x600" alt="Corporate website redesign showing modern layout and interactive elements" class="w-full h-60 object-cover" onerror="this.src='https://placehold.co/800x600?text=Corporate+Website'">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold text-gray-800">Corporate Website Redesign</h3>
+                            <span class="px-3 py-1 bg-indigo-100 text-indigo-800 text-xs font-semibold rounded-full">Web Dev</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Modern, conversion-optimized corporate website rebranded for improved engagement and lead generation.</p>
+                        <div class="flex justify-between items-center">
+                            <a href="#" class="text-blue-600 hover:text-blue-800 font-medium flex items-center">
+                                View Project
+                                <i class="fas fa-external-link-alt ml-2 text-sm"></i>
+                            </a>
+                            <div class="flex space-x-2">
+                                <span class="text-xs text-gray-500">WordPress</span>
+                                <span class="text-xs text-gray-500">Tailwind</span>
+                                <span class="text-xs text-gray-500">GSAP</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-12">
+                <a href="#" class="px-6 py-3 border-2 border-blue-500 text-blue-600 font-bold rounded-full inline-flex items-center hover:bg-blue-500 hover:text-white transition duration-300">
+                    View Full Portfolio
+                    <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Get In <span class="gradient-text" style="background-image: linear-gradient(135deg, var(--primary), var(--secondary)); -webkit-background-clip: text; color: transparent;">Touch</span></h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Ready to start your next project or have questions about my services? I'd love to hear from you!</p>
+                <div class="w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto mt-4"></div>
+            </div>
+
+            <div class="flex flex-col md:flex-row gap-10">
+                <div class="md:w-1/2 bg-white rounded-lg shadow-md p-8 h-full">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6">Send Me a Message</h3>
+                    <form id="contact-form" class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Name</label>
+                                <input type="text" id="name" name="name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500" required>
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                                <input type="email" id="email" name="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500" required>
+                            </div>
+                        </div>
+                        <div>
+                            <label for="subject" class="block text-sm font-medium text-gray-700 mb-1">Subject</label>
+                            <input type="text" id="subject" name="subject" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500" required>
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
+                            <textarea id="message" name="message" rows="5" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500" required></textarea>
+                        </div>
+                        <button type="submit" class="w-full px-6 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-bold rounded-full hover:from-blue-600 hover:to-purple-700 transition duration-300">
+                            Send Message
+                            <i class="fas fa-paper-plane ml-2"></i>
+                        </button>
+                    </form>
+                </div>
+
+                <div class="md:w-1/2 space-y-8">
+                    <div class="bg-white rounded-lg shadow-md p-8">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-6">Contact Information</h3>
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 h-10 w-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 mr-4">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-semibold text-gray-800">Location</h4>
+                                    <p class="text-gray-600">Nairobi, Kenya</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 h-10 w-10 rounded-full bg-purple-100 flex items-center justify-center text-purple-600 mr-4">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-semibold text-gray-800">Email</h4>
+                                    <p class="text-gray-600">Jones31144@gmail.com</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 h-10 w-10 rounded-full bg-green-100 flex items-center justify-center text-green-600 mr-4">
+                                    <i class="fab fa-whatsapp"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-semibold text-gray-800">WhatsApp</h4>
+                                    <p class="text-gray-600">+27 71 339 0429</p>
+                                    <a href="https://wa.me/27713390429" class="mt-2 px-4 py-2 bg-green-500 text-white rounded-full inline-flex items-center hover:bg-green-600 transition duration-300">
+                                        <i class="fab fa-whatsapp mr-2"></i> Chat Now
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-lg shadow-md p-8">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-6">Follow Me</h3>
+                        <div class="flex flex-wrap gap-4">
+                            <a href="#" class="w-12 h-12 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center hover:bg-blue-200 transition duration-300">
+                                <i class="fab fa-linkedin-in text-xl"></i>
+                            </a>
+                            <a href="#" class="w-12 h-12 rounded-full bg-blue-400 text-white flex items-center justify-center hover:bg-blue-500 transition duration-300">
+                                <i class="fab fa-twitter text-xl"></i>
+                            </a>
+                            <a href="#" class="w-12 h-12 rounded-full bg-pink-600 text-white flex items-center justify-center hover:bg-pink-700 transition duration-300">
+                                <i class="fab fa-instagram text-xl"></i>
+                            </a>
+                            <a href="#" class="w-12 h-12 rounded-full bg-gray-800 text-white flex items-center justify-center hover:bg-gray-900 transition duration-300">
+                                <i class="fab fa-github text-xl"></i>
+                            </a>
+                            <a href="#" class="w-12 h-12 rounded-full bg-red-600 text-white flex items-center justify-center hover:bg-red-700 transition duration-300">
+                                <i class="fab fa-youtube text-xl"></i>
+                            </a>
+                            <a href="#" class="w-12 h-12 rounded-full bg-purple-600 text-white flex items-center justify-center hover:bg-purple-700 transition duration-300">
+                                <i class="fab fa-dribbble text-xl"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="md:flex md:justify-between">
+                <div class="mb-8 md:mb-0">
+                    <div class="flex items-center">
+                        <span class="text-xl font-bold text-white">Jones <span class="gradient-text" style="background-image: linear-gradient(135deg, var(--primary), var(--secondary)); -webkit-background-clip: text; color: transparent;">Tech & Media</span></span>
+                    </div>
+                    <p class="mt-4 max-w-xs">Bridging creativity and technology to build innovative digital solutions for your business needs.</p>
+                </div>
+
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-8">
+                    <div>
+                        <h4 class="text-lg font-semibold text-white mb-4">Quick Links</h4>
+                        <ul class="space-y-2">
+                            <li><a href="#home" class="hover:text-white transition duration-300">Home</a></li>
+                            <li><a href="#about" class="hover:text-white transition duration-300">About</a></li>
+                            <li><a href="#services" class="hover:text-white transition duration-300">Services</a></li>
+                            <li><a href="#portfolio" class="hover:text-white transition duration-300">Portfolio</a></li>
+                            <li><a href="#contact" class="hover:text-white transition duration-300">Contact</a></li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h4 class="text-lg font-semibold text-white mb-4">Services</h4>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="hover:text-white transition duration-300">Software Development</a></li>
+                            <li><a href="#" class="hover:text-white transition duration-300">Media Production</a></li>
+                            <li><a href="#" class="hover:text-white transition duration-300">Digital Marketing</a></li>
+                            <li><a href="#" class="hover:text-white transition duration-300">Web Design</a></li>
+                            <li><a href="#" class="hover:text-white transition duration-300">Cybersecurity</a></li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h4 class="text-lg font-semibold text-white mb-4">Legal</h4>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="hover:text-white transition duration-300">Privacy Policy</a></li>
+                            <li><a href="#" class="hover:text-white transition duration-300">Terms of Service</a></li>
+                            <li><a href="#" class="hover:text-white transition duration-300">Cookie Policy</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-12 pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-sm text-center md:text-left mb-4 md:mb-0">© 2025 Jones Tech & Media. All rights reserved.</p>
+
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white">
+                        <i class="fab fa-tiktok"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                if (document.getElementById('mobile-menu').classList.contains('hidden') === false) {
+                    document.getElementById('mobile-menu').classList.add('hidden');
+                }
+
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Contact form submission
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            // In a real implementation, you would send the form data to a server
+            alert('Thank you for your message! I will get back to you soon.');
+            this.reset();
+        });
+    </script>
+</body>
+
+</html>
